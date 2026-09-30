@@ -1,314 +1,257 @@
-```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Mahadev Wallpapers 4K HD | Lord Shiva Wallpapers Free</title>
-
-  <meta name="description"
-    content="Download beautiful Mahadev, Lord Shiva, Mahakal, Bholenath and Shivling 4K HD wallpapers for mobile and desktop. Free HD wallpapers.">
-
-  <meta name="keywords"
-    content="Mahadev wallpapers, Shiva wallpapers, Mahakal wallpapers, Bholenath wallpapers, Shivling wallpapers, Lord Shiva 4K, Mahadev 4K HD">
-
-  <meta name="robots" content="index, follow">
-  <meta name="theme-color" content="#090909">
+  <title>Mahadev Shiva Wallpaper Gallery</title>
 
   <style>
     * {
-      box-sizing: border-box;
       margin: 0;
       padding: 0;
-    }
-
-    html {
-      scroll-behavior: smooth;
+      box-sizing: border-box;
     }
 
     body {
-      font-family: Arial, Helvetica, sans-serif;
-      background: #080808;
-      color: #fff;
-      line-height: 1.6;
-    }
-
-    /* HEADER */
-    header {
+      font-family: Arial, sans-serif;
       background:
-        linear-gradient(rgba(0,0,0,.75), rgba(0,0,0,.9)),
-        radial-gradient(circle at center, #352000, #090909 70%);
-      text-align: center;
-      padding: 45px 20px 35px;
-      border-bottom: 2px solid #ffcc00;
+        radial-gradient(circle at top, #252525 0%, #0b0b0b 45%, #000 100%);
+      color: white;
+      min-height: 100vh;
     }
 
-    .trishul {
-      font-size: 48px;
-      margin-bottom: 10px;
+    /* Header */
+    header {
+      text-align: center;
+      padding: 45px 20px 30px;
+      background: linear-gradient(
+        to bottom,
+        rgba(255, 153, 51, 0.15),
+        transparent
+      );
     }
 
     header h1 {
-      color: #ffcc00;
-      font-size: clamp(28px, 5vw, 48px);
-      margin-bottom: 8px;
+      color: #ff9933;
+      font-size: clamp(2rem, 6vw, 4rem);
+      text-shadow: 0 0 20px rgba(255, 153, 51, 0.6);
+      margin-bottom: 10px;
     }
 
     header p {
-      color: #ddd;
-      font-size: 16px;
+      color: #ccc;
+      font-size: 1rem;
     }
 
-    /* NAVIGATION */
-    nav {
-      position: sticky;
-      top: 0;
-      z-index: 100;
-      background: rgba(15,15,15,.96);
-      border-bottom: 1px solid #292929;
-      padding: 12px 15px;
-      text-align: center;
+    .om {
+      font-size: 2.5rem;
+      color: #ff9933;
+      margin-bottom: 10px;
     }
 
-    nav a {
-      color: #fff;
-      text-decoration: none;
-      margin: 0 12px;
-      font-size: 14px;
-      transition: .3s;
+    /* Search */
+    .controls {
+      max-width: 1000px;
+      margin: 20px auto 30px;
+      padding: 0 20px;
     }
 
-    nav a:hover {
-      color: #ffcc00;
-    }
-
-    /* SEARCH */
     .search-box {
-      max-width: 650px;
-      margin: 25px auto 10px;
-      padding: 0 15px;
-    }
-
-    .search-box input {
       width: 100%;
-      padding: 15px 18px;
-      border-radius: 30px;
+      padding: 15px 20px;
       border: 1px solid #444;
-      outline: none;
-      background: #171717;
+      border-radius: 30px;
+      background: #151515;
       color: white;
       font-size: 16px;
+      outline: none;
     }
 
-    .search-box input:focus {
-      border-color: #ffcc00;
+    .search-box:focus {
+      border-color: #ff9933;
+      box-shadow: 0 0 15px rgba(255, 153, 51, 0.25);
     }
 
-    /* CATEGORIES */
-    .categories {
-      text-align: center;
-      padding: 15px;
-    }
-
-    .category-btn {
-      display: inline-block;
-      border: 1px solid #444;
-      background: #151515;
-      color: #ddd;
-      padding: 9px 16px;
-      margin: 5px;
-      border-radius: 20px;
-      cursor: pointer;
-      transition: .3s;
-    }
-
-    .category-btn:hover,
-    .category-btn.active {
-      background: #ffcc00;
-      color: #000;
-      border-color: #ffcc00;
-    }
-
-    /* AD PLACEHOLDER */
-    .ad-box {
-      max-width: 970px;
-      min-height: 90px;
-      margin: 20px auto;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      color: #777;
-      border: 1px dashed #333;
-      background: #0e0e0e;
-      font-size: 13px;
-    }
-
-    /* GALLERY */
+    /* Gallery */
     .gallery {
       max-width: 1400px;
       margin: auto;
       padding: 20px;
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-      gap: 20px;
+      grid-template-columns: repeat(
+        auto-fit,
+        minmax(250px, 1fr)
+      );
+      gap: 25px;
     }
 
+    /* Card */
     .card {
-      background: #151515;
-      border-radius: 14px;
+      background: linear-gradient(145deg, #1d1d1d, #111);
+      border: 1px solid #2e2e2e;
+      border-radius: 18px;
       overflow: hidden;
-      border: 1px solid #292929;
-      transition: transform .3s, box-shadow .3s;
+      padding: 10px;
+      transition: 0.35s ease;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
     }
 
     .card:hover {
-      transform: translateY(-6px);
-      box-shadow: 0 10px 30px rgba(255,204,0,.12);
+      transform: translateY(-8px);
+      border-color: #ff9933;
+      box-shadow:
+        0 15px 40px rgba(0, 0, 0, 0.7),
+        0 0 20px rgba(255, 153, 51, 0.15);
     }
 
     .image-container {
       position: relative;
       overflow: hidden;
+      border-radius: 12px;
+      cursor: pointer;
     }
 
     .card img {
       width: 100%;
-      height: 330px;
+      height: 350px;
       object-fit: cover;
       display: block;
-      transition: transform .5s;
+      transition: transform 0.5s ease;
     }
 
     .card:hover img {
-      transform: scale(1.05);
+      transform: scale(1.06);
     }
 
-    .card-content {
-      padding: 13px;
+    /* Overlay */
+    .overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.45);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      transition: 0.3s ease;
     }
 
-    .card h2 {
-      font-size: 16px;
-      color: #ffcc00;
-      margin-bottom: 10px;
+    .image-container:hover .overlay {
+      opacity: 1;
     }
 
-    .download-btn {
-      display: block;
-      width: 100%;
-      padding: 12px;
-      background: #ffcc00;
-      color: #000;
-      text-align: center;
-      text-decoration: none;
-      border-radius: 8px;
+    .view-btn {
+      background: #ff9933;
+      color: #111;
+      border: none;
+      padding: 12px 20px;
+      border-radius: 25px;
       font-weight: bold;
-      transition: .3s;
+      cursor: pointer;
     }
 
-    .download-btn:hover {
+    /* Card text */
+    .card h2 {
+      color: #ff9933;
+      font-size: 18px;
+      margin: 15px 5px 10px;
+    }
+
+    .btn {
+      display: block;
+      text-align: center;
+      margin: 10px 5px 5px;
+      padding: 12px;
+      background: linear-gradient(
+        135deg,
+        #ff9933,
+        #ffb84d
+      );
+      color: #111;
+      border-radius: 10px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: 0.25s;
+    }
+
+    .btn:hover {
       background: #fff;
+      transform: scale(1.02);
     }
 
-    /* NO RESULTS */
+    /* No results */
     #noResults {
       display: none;
       text-align: center;
       color: #aaa;
-      padding: 50px 20px;
+      padding: 50px;
       font-size: 18px;
     }
 
-    /* ABOUT */
-    .about {
-      max-width: 900px;
-      margin: 30px auto;
-      padding: 30px 20px;
-      text-align: center;
+    /* Fullscreen modal */
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 9999;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.92);
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
     }
 
-    .about h2 {
-      color: #ffcc00;
-      margin-bottom: 12px;
+    .modal img {
+      max-width: 95%;
+      max-height: 90vh;
+      border-radius: 12px;
+      box-shadow: 0 0 40px rgba(255, 153, 51, 0.25);
     }
 
-    .about p {
-      color: #bbb;
+    .close {
+      position: absolute;
+      top: 20px;
+      right: 30px;
+      color: white;
+      font-size: 40px;
+      cursor: pointer;
+      transition: 0.2s;
     }
 
-    /* FOOTER */
+    .close:hover {
+      color: #ff9933;
+    }
+
+    /* Footer */
     footer {
-      background: #111;
-      border-top: 1px solid #292929;
       text-align: center;
-      padding: 30px 15px;
+      padding: 40px 20px;
+      color: #777;
       margin-top: 30px;
+      border-top: 1px solid #222;
     }
 
-    footer a {
-      color: #ffcc00;
-      text-decoration: none;
-      margin: 0 8px;
+    footer strong {
+      color: #ff9933;
     }
 
-    footer a:hover {
-      text-decoration: underline;
-    }
-
-    footer p {
-      color: #888;
-      margin-top: 15px;
-      font-size: 13px;
-    }
-
-    /* MOBILE */
+    /* Mobile */
     @media (max-width: 600px) {
-
       header {
-        padding: 35px 15px 25px;
+        padding-top: 30px;
       }
 
-      .trishul {
-        font-size: 38px;
-      }
-
-      nav a {
-        margin: 0 5px;
-        font-size: 12px;
-      }
-
-      .gallery {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 10px;
-        padding: 10px;
-      }
-
-      .card img {
-        height: 250px;
-      }
-
-      .card-content {
-        padding: 9px;
-      }
-
-      .card h2 {
-        font-size: 13px;
-      }
-
-      .download-btn {
-        font-size: 13px;
-        padding: 10px 5px;
-      }
-    }
-
-    @media (max-width: 380px) {
       .gallery {
         grid-template-columns: 1fr;
+        padding: 15px;
       }
 
       .card img {
-        height: 350px;
+        height: 420px;
+      }
+
+      .close {
+        right: 15px;
+        top: 10px;
       }
     }
   </style>
@@ -316,320 +259,294 @@
 
 <body>
 
-  <!-- HEADER -->
   <header>
-    <div class="trishul">🔱</div>
+    <div class="om">ॐ</div>
 
-    <h1>Mahadev Wallpapers 4K</h1>
+    <h1>🔱 Mahadev Shiva 🔱</h1>
 
     <p>
-      Har Har Mahadev 🙏 | Free HD & 4K Lord Shiva Wallpapers
+      Divine Shiva Wallpapers • HD Collection
     </p>
   </header>
 
-  <!-- NAVIGATION -->
-  <nav>
-    <a href="#home">Home</a>
-    <a href="#wallpapers">Wallpapers</a>
-    <a href="#about">About</a>
-    <a href="contact.html">Contact</a>
-  </nav>
 
-  <!-- SEARCH -->
-  <div class="search-box">
+  <div class="controls">
+
     <input
-      type="search"
-      id="searchInput"
-      placeholder="🔍 Search Mahadev, Mahakal, Shiva..."
-      aria-label="Search wallpapers">
-  </div>
-
-  <!-- CATEGORIES -->
-  <div class="categories">
-
-    <button class="category-btn active" data-category="all">
-      All
-    </button>
-
-    <button class="category-btn" data-category="mahadev">
-      Mahadev
-    </button>
-
-    <button class="category-btn" data-category="mahakal">
-      Mahakal
-    </button>
-
-    <button class="category-btn" data-category="bholenath">
-      Bholenath
-    </button>
-
-    <button class="category-btn" data-category="shivling">
-      Shivling
-    </button>
-
-    <button class="category-btn" data-category="kedarnath">
-      Kedarnath
-    </button>
+      type="text"
+      id="search"
+      class="search-box"
+      placeholder="🔍 Search Shiva wallpapers..."
+      onkeyup="searchWallpapers()"
+    >
 
   </div>
 
-  <!-- ADSENSE PLACEHOLDER -->
-  <div class="ad-box">
-    <!-- Google AdSense code goes here -->
-    Advertisement
-  </div>
 
-  <!-- WALLPAPER GALLERY -->
-  <main id="wallpapers">
+  <main class="gallery" id="gallery">
 
-    <div class="gallery" id="gallery">
+    <!-- Wallpaper 1 -->
+    <div class="card" data-name="shiva mahadev">
+      <div
+        class="image-container"
+        onclick="openImage('shiva.jpg')"
+      >
 
-      <!-- WALLPAPER 1 -->
-      <div class="card" data-category="mahadev" data-title="Mahadev Lord Shiva">
+        <img
+          src="shiva.jpg"
+          alt="Mahadev Shiva Wallpaper"
+          loading="lazy"
+        >
 
-        <div class="image-container">
-          <img
-            src="https://images.unsplash.com/photo-1604613057757-3e5d6b6f0e1a?q=80&w=900"
-            alt="Mahadev Lord Shiva 4K Wallpaper"
-            loading="lazy">
-        </div>
-
-        <div class="card-content">
-          <h2>Mahadev 4K Wallpaper</h2>
-
-          <a
-            class="download-btn"
-            href="https://images.unsplash.com/photo-1604613057757-3e5d6b6f0e1a?q=80&w=1600"
-            download>
-            ⬇ Download HD
-          </a>
+        <div class="overlay">
+          <button class="view-btn">
+            🔍 View Fullscreen
+          </button>
         </div>
 
       </div>
 
+      <h2>Mahadev Shiva</h2>
 
-      <!-- WALLPAPER 2 -->
-      <div class="card" data-category="bholenath" data-title="Bholenath Shiva">
-
-        <div class="image-container">
-          <img
-            src="https://images.unsplash.com/photo-1561361058-c24cecae35ca?q=80&w=900"
-            alt="Bholenath Shiva Wallpaper"
-            loading="lazy">
-        </div>
-
-        <div class="card-content">
-          <h2>Bholenath HD Wallpaper</h2>
-
-          <a
-            class="download-btn"
-            href="https://images.unsplash.com/photo-1561361058-c24cecae35ca?q=80&w=1600"
-            download>
-            ⬇ Download HD
-          </a>
-        </div>
-
-      </div>
-
-
-      <!-- WALLPAPER 3 -->
-      <div class="card" data-category="kedarnath" data-title="Kedarnath Temple">
-
-        <div class="image-container">
-          <img
-            src="https://images.unsplash.com/photo-1590055531615-f16d63a6d71a?q=80&w=900"
-            alt="Kedarnath Temple Wallpaper"
-            loading="lazy">
-        </div>
-
-        <div class="card-content">
-          <h2>Kedarnath 4K Wallpaper</h2>
-
-          <a
-            class="download-btn"
-            href="https://images.unsplash.com/photo-1590055531615-f16d63a6d71a?q=80&w=1600"
-            download>
-            ⬇ Download HD
-          </a>
-        </div>
-
-      </div>
-
-
-      <!-- WALLPAPER 4 -->
-      <div class="card" data-category="mahakal" data-title="Mahakal Wallpaper">
-
-        <div class="image-container">
-          <img
-            src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=900"
-            alt="Mahakal Wallpaper"
-            loading="lazy">
-        </div>
-
-        <div class="card-content">
-          <h2>Mahakal 4K Wallpaper</h2>
-
-          <a
-            class="download-btn"
-            href="https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=1600"
-            download>
-            ⬇ Download HD
-          </a>
-        </div>
-
-      </div>
-
-
-      <!-- WALLPAPER 5 -->
-      <div class="card" data-category="bholenath" data-title="Bholenath Wallpaper">
-
-        <div class="image-container">
-          <img
-            src="https://images.unsplash.com/photo-1544183663-5a07e6be2e8e?q=80&w=900"
-            alt="Bholenath HD Wallpaper"
-            loading="lazy">
-        </div>
-
-        <div class="card-content">
-          <h2>Bholenath HD Wallpaper</h2>
-
-          <a
-            class="download-btn"
-            href="https://images.unsplash.com/photo-1544183663-5a07e6be2e8e?q=80&w=1600"
-            download>
-            ⬇ Download HD
-          </a>
-        </div>
-
-      </div>
-
-
-      <!-- WALLPAPER 6 -->
-      <div class="card" data-category="shivling" data-title="Shivling Wallpaper">
-
-        <div class="image-container">
-          <img
-            src="https://images.unsplash.com/photo-1514222131013-5a436b6dd2b6?q=80&w=900"
-            alt="Shivling Wallpaper"
-            loading="lazy">
-        </div>
-
-        <div class="card-content">
-          <h2>Shivling HD Wallpaper</h2>
-
-          <a
-            class="download-btn"
-            href="https://images.unsplash.com/photo-1514222131013-5a436b6dd2b6?q=80&w=1600"
-            download>
-            ⬇ Download HD
-          </a>
-        </div>
-
-      </div>
-
+      <a
+        class="btn"
+        href="shiva.jpg"
+        download
+      >
+        ⬇ Download HD
+      </a>
     </div>
 
-    <div id="noResults">
-      No wallpapers found 🙏
+
+    <!-- Wallpaper 2 -->
+    <div class="card" data-name="shiva meditation">
+      <div
+        class="image-container"
+        onclick="openImage('download (3).jpg')"
+      >
+
+        <img
+          src="download (3).jpg"
+          alt="Shiva Meditation Wallpaper"
+          loading="lazy"
+        >
+
+        <div class="overlay">
+          <button class="view-btn">
+            🔍 View Fullscreen
+          </button>
+        </div>
+
+      </div>
+
+      <h2>Shiva Meditation</h2>
+
+      <a
+        class="btn"
+        href="download (3).jpg"
+        download
+      >
+        ⬇ Download HD
+      </a>
+    </div>
+
+
+    <!-- Wallpaper 3 -->
+    <div class="card" data-name="mahadev trishul">
+      <div
+        class="image-container"
+        onclick="openImage('download (7).jpg')"
+      >
+
+        <img
+          src="download (7).jpg"
+          alt="Mahadev Trishul Wallpaper"
+          loading="lazy"
+        >
+
+        <div class="overlay">
+          <button class="view-btn">
+            🔍 View Fullscreen
+          </button>
+        </div>
+
+      </div>
+
+      <h2>Mahadev Trishul</h2>
+
+      <a
+        class="btn"
+        href="download (7).jpg"
+        download
+      >
+        ⬇ Download HD
+      </a>
+    </div>
+
+
+    <!-- Wallpaper 4 -->
+    <div class="card" data-name="lord shiva">
+      <div
+        class="image-container"
+        onclick="openImage('download (8).jpg')"
+      >
+
+        <img
+          src="download (8).jpg"
+          alt="Lord Shiva Wallpaper"
+          loading="lazy"
+        >
+
+        <div class="overlay">
+          <button class="view-btn">
+            🔍 View Fullscreen
+          </button>
+        </div>
+
+      </div>
+
+      <h2>Lord Shiva</h2>
+
+      <a
+        class="btn"
+        href="download (8).jpg"
+        download
+      >
+        ⬇ Download HD
+      </a>
+    </div>
+
+
+    <!-- Wallpaper 5 -->
+    <div class="card" data-name="shivam moonlit meditation">
+      <div
+        class="image-container"
+        onclick="openImage('shivam-moonlit-meditation.png')"
+      >
+
+        <img
+          src="shivam-moonlit-meditation.png"
+          alt="Shivam Moonlit Meditation"
+          loading="lazy"
+        >
+
+        <div class="overlay">
+          <button class="view-btn">
+            🔍 View Fullscreen
+          </button>
+        </div>
+
+      </div>
+
+      <h2>Moonlit Meditation</h2>
+
+      <a
+        class="btn"
+        href="shivam-moonlit-meditation.png"
+        download
+      >
+        ⬇ Download HD
+      </a>
+    </div>
+
+
+    <!-- Wallpaper 6 -->
+    <div class="card" data-name="shivam neelkanth">
+      <div
+        class="image-container"
+        onclick="openImage('shivam-neelkanth.png')"
+      >
+
+        <img
+          src="shivam-neelkanth.png"
+          alt="Shivam Neelkanth"
+          loading="lazy"
+        >
+
+        <div class="overlay">
+          <button class="view-btn">
+            🔍 View Fullscreen
+          </button>
+        </div>
+
+      </div>
+
+      <h2>Neelkanth Mahadev</h2>
+
+      <a
+        class="btn"
+        href="shivam-neelkanth.png"
+        download
+      >
+        ⬇ Download HD
+      </a>
     </div>
 
   </main>
 
 
-  <!-- ABOUT -->
-  <section class="about" id="about">
-
-    <h2>About Mahadev Wallpapers</h2>
-
-    <p>
-      Welcome to Mahadev Wallpapers 4K. Here you can find
-      beautiful Lord Shiva, Mahadev, Mahakal, Bholenath,
-      Shivling and Kedarnath wallpapers for your mobile
-      and desktop devices.
-    </p>
-
-    <br>
-
-    <p>
-      Har Har Mahadev 🔱
-    </p>
-
-  </section>
+  <div id="noResults">
+    🙏 No wallpapers found.
+  </div>
 
 
-  <!-- FOOTER -->
+  <!-- Fullscreen Modal -->
+  <div
+    class="modal"
+    id="imageModal"
+    onclick="closeImage()"
+  >
+
+    <span class="close">&times;</span>
+
+    <img
+      id="modalImage"
+      src=""
+      alt="Fullscreen Shiva Wallpaper"
+      onclick="event.stopPropagation()"
+    >
+
+  </div>
+
+
   <footer>
-
-    <div>
-      <a href="about.html">About Us</a>
-      |
-      <a href="privacy.html">Privacy Policy</a>
-      |
-      <a href="contact.html">Contact Us</a>
-      |
-      <a href="disclaimer.html">Disclaimer</a>
-    </div>
-
     <p>
-      © 2026 Mahadev Wallpapers 4K.
-      All Rights Reserved.
+      🔱 <strong>Har Har Mahadev</strong> 🔱
     </p>
 
-    <p>
-      Made with 🙏 for Mahadev devotees.
+    <p style="margin-top:10px;">
+      © 2026 Mahadev Shiva Wallpaper Gallery
     </p>
-
   </footer>
 
 
-  <!-- SEARCH + CATEGORY JAVASCRIPT -->
   <script>
 
-    const searchInput =
-      document.getElementById("searchInput");
-
-    const cards =
-      document.querySelectorAll(".card");
-
-    const buttons =
-      document.querySelectorAll(".category-btn");
-
-    const noResults =
-      document.getElementById("noResults");
-
-    let selectedCategory = "all";
-
-
-    function filterWallpapers() {
+    /* Search wallpapers */
+    function searchWallpapers() {
 
       const search =
-        searchInput.value.toLowerCase().trim();
+        document
+          .getElementById("search")
+          .value
+          .toLowerCase();
 
-      let visibleCards = 0;
+      const cards =
+        document.querySelectorAll(".card");
 
+      let found = 0;
 
       cards.forEach(card => {
 
-        const title =
-          card.dataset.title.toLowerCase();
+        const name =
+          card
+            .getAttribute("data-name")
+            .toLowerCase();
 
-        const category =
-          card.dataset.category.toLowerCase();
+        if (name.includes(search)) {
 
-
-        const matchesSearch =
-          title.includes(search);
-
-        const matchesCategory =
-          selectedCategory === "all" ||
-          category === selectedCategory;
-
-
-        if (matchesSearch && matchesCategory) {
-
-          card.style.display = "";
-
-          visibleCards++;
+          card.style.display = "block";
+          found++;
 
         } else {
 
@@ -639,35 +556,44 @@
 
       });
 
-
-      noResults.style.display =
-        visibleCards === 0 ? "block" : "none";
-
+      document.getElementById("noResults").style.display =
+        found === 0 ? "block" : "none";
     }
 
 
-    searchInput.addEventListener(
-      "input",
-      filterWallpapers
-    );
+    /* Open fullscreen image */
+    function openImage(image) {
+
+      const modal =
+        document.getElementById("imageModal");
+
+      const modalImage =
+        document.getElementById("modalImage");
+
+      modalImage.src = image;
+
+      modal.style.display = "flex";
+
+      document.body.style.overflow = "hidden";
+    }
 
 
-    buttons.forEach(button => {
+    /* Close fullscreen image */
+    function closeImage() {
 
-      button.addEventListener("click", () => {
+      document.getElementById("imageModal").style.display =
+        "none";
 
-        buttons.forEach(btn =>
-          btn.classList.remove("active")
-        );
+      document.body.style.overflow = "auto";
+    }
 
-        button.classList.add("active");
 
-        selectedCategory =
-          button.dataset.category;
+    /* Close with Escape key */
+    document.addEventListener("keydown", function(event) {
 
-        filterWallpapers();
-
-      });
+      if (event.key === "Escape") {
+        closeImage();
+      }
 
     });
 
@@ -675,4 +601,3 @@
 
 </body>
 </html>
-```
