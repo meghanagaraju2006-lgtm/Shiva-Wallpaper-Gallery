@@ -2,19 +2,21 @@
 <html>
 <head>
 <title>Shiva Wallpaper Gallery</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
 body{margin:0;background:#0f0f0f;color:#fff;font-family:Arial}
 header{text-align:center;padding:30px;background:#1a1a2e}
+header h1{margin:0}
 .gallery{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:15px;padding:20px}
-.card{background:#1e1e1e;border-radius:12px;overflow:hidden}
-.card img{width:100%;height:350px;object-fit:cover}
-.card .info{padding:10px;display:flex;justify-content:space-between}
-.btn{background:#ff6a00;color:#fff;padding:6px 12px;border-radius:6px;text-decoration:none}
+.card{background:#1e1e1e;border-radius:12px;overflow:hidden;box-shadow:0 4px 10px rgba(0,0,0,0.5)}
+.card img{width:100%;height:350px;object-fit:cover;display:block}
+.card .info{padding:10px;display:flex;justify-content:space-between;align-items:center}
+.btn{background:#ff6a00;color:#fff;padding:6px 12px;border-radius:6px;text-decoration:none;font-size:12px}
 </style>
 </head>
 <body>
-<header><h1>🔱 Shiva Wallpaper Gallery 🔱</h1></header>
-<div id="gallery" class="gallery"></div>
+<header><h1>🔱 Shiva Wallpaper Gallery 🔱</h1><p>HD Mahadev Wallpapers - Auto Updates</p></header>
+<div id="gallery" class="gallery">Loading wallpapers...</div>
 <script>
 async function loadImages(){
   const res = await fetch(`https://api.github.com/repos/meghanagaraju2006-lgtm/Shiva-Wallpaper-Gallery/contents`);
@@ -22,7 +24,8 @@ async function loadImages(){
   const gallery = document.getElementById("gallery");
   gallery.innerHTML="";
   files.filter(f=>f.name.match(/\.(jpg|jpeg|png|webp)$/i)).forEach(file=>{
-    gallery.innerHTML+=`<div class="card"><img src="${file.download_url}"><div class="info"><p>${file.name}</p><a class="btn" href="${file.download_url}" download>Download</a></div></div>`;
+    const safeUrl = encodeURI(file.download_url);
+    gallery.innerHTML+=`<div class="card"><img src="${safeUrl}" loading="lazy"><div class="info"><p style="font-size:12px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;width:120px;">${file.name}</p><a class="btn" href="${safeUrl}" download>Download</a></div></div>`;
   });
 }
 loadImages();
